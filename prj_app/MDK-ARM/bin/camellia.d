@@ -1,0 +1,12 @@
+.\bin\camellia.o: ..\PolarSSL\polarssl-2.6.0-Apache\library\camellia.c
+.\bin\camellia.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/config.h
+.\bin\camellia.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/check_config.h
+.\bin\camellia.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\bin\camellia.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/camellia.h
+.\bin\camellia.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\camellia.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\camellia.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\bin\camellia.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/platform.h
+.\bin\camellia.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\bin\camellia.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\bin\camellia.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h

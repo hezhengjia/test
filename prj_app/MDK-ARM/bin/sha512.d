@@ -1,0 +1,12 @@
+.\bin\sha512.o: ..\PolarSSL\polarssl-2.6.0-Apache\library\sha512.c
+.\bin\sha512.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/config.h
+.\bin\sha512.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/check_config.h
+.\bin\sha512.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\bin\sha512.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/sha512.h
+.\bin\sha512.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\sha512.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\sha512.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\bin\sha512.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/platform.h
+.\bin\sha512.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\bin\sha512.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\bin\sha512.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h

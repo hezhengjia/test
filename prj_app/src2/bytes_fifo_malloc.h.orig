@@ -1,0 +1,52 @@
+#ifndef FIFO_MAROC_BYTES_H___
+#define FIFO_MAROC_BYTES_H___
+
+
+
+
+
+#include "stdint.h"
+#include "stdbool.h"
+#include "string.h"
+#include "malloc.h"	 
+
+
+typedef struct
+{
+uint8_t *pdata;
+uint16_t len;
+}STU_DATAS;
+
+typedef struct
+{
+uint16_t dt_in;      //uint16_t
+uint16_t dt_out;     //uint16_t
+uint16_t max_element;
+STU_DATAS *stu_datas;
+
+}STU_QUEUE_MALLOC;
+
+
+void myfree_mmc(void *ptr);
+
+void *mymalloc_mmc(u32 size);
+
+
+
+#define QUEUE_MALLOC(A) mymalloc_mmc(A) //mymalloc(SRAMCCM,A)
+#define QUEUE_FREE(B)   myfree_mmc(B)//myfree(SRAMCCM,B);
+
+
+void queue_malloc_delete(STU_QUEUE_MALLOC *StuQueuemalloc,uint16_t cnt);
+uint8_t* queue_malloc_out(STU_QUEUE_MALLOC *StuQueuemalloc,uint16_t* len);
+bool queue_malloc_in(STU_QUEUE_MALLOC *StuQueuemalloc,uint8_t *buf,uint16_t len);
+bool queue_malloc_is_empty(STU_QUEUE_MALLOC *StuQueuemalloc);
+void queue_malloc_init(STU_QUEUE_MALLOC *StuQueuemalloc,STU_DATAS *stu_datas,uint16_t max_elements);
+
+
+#endif
+
+
+
+
+

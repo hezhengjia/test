@@ -1,0 +1,14 @@
+.\bin\fs.o: ..\src\fs.c
+.\bin\fs.o: ..\Utilities\Third_Party\lwip-1.4.1\src\include\lwip/opt.h
+.\bin\fs.o: ..\inc\lwipopts.h
+.\bin\fs.o: ..\Utilities\Third_Party\lwip-1.4.1\src\include\lwip/debug.h
+.\bin\fs.o: ..\Utilities\Third_Party\lwip-1.4.1\src\include\lwip/arch.h
+.\bin\fs.o: ..\Utilities\Third_Party\lwip-1.4.1\port\STM32F4x7\arch/cc.h
+.\bin\fs.o: ..\Utilities\Third_Party\lwip-1.4.1\port\STM32F4x7\arch/cpu.h
+.\bin\fs.o: ..\Utilities\Third_Party\lwip-1.4.1\src\include\lwip/opt.h
+.\bin\fs.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\bin\fs.o: ..\Utilities\Third_Party\lwip-1.4.1\src\include\lwip/def.h
+.\bin\fs.o: ..\inc\fs.h
+.\bin\fs.o: ..\inc\fsdata.h
+.\bin\fs.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\bin\fs.o: ..\src\fsdata.c

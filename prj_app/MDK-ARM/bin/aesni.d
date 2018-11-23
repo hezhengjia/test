@@ -1,0 +1,9 @@
+.\bin\aesni.o: ..\PolarSSL\polarssl-2.6.0-Apache\library\aesni.c
+.\bin\aesni.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/config.h
+.\bin\aesni.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/check_config.h
+.\bin\aesni.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\bin\aesni.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/aesni.h
+.\bin\aesni.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/aes.h
+.\bin\aesni.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\aesni.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\aesni.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

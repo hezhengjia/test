@@ -1,0 +1,11 @@
+.\bin\port.o: ..\Utilities\Third_Party\FreeRTOSV7.3.0\portable\RVDS\ARM_CM3\port.c
+.\bin\port.o: ..\Utilities\Third_Party\FreeRTOSV7.3.0\include\FreeRTOS.h
+.\bin\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\port.o: ..\Utilities\Third_Party\FreeRTOSV7.3.0\include\projdefs.h
+.\bin\port.o: ..\inc\FreeRTOSConfig.h
+.\bin\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\port.o: ..\Utilities\Third_Party\FreeRTOSV7.3.0\include\portable.h
+.\bin\port.o: ..\Utilities\Third_Party\FreeRTOSV7.3.0\portable\RVDS\ARM_CM4F\portmacro.h
+.\bin\port.o: ..\Utilities\Third_Party\FreeRTOSV7.3.0\include\mpu_wrappers.h
+.\bin\port.o: ..\Utilities\Third_Party\FreeRTOSV7.3.0\include\task.h
+.\bin\port.o: ..\Utilities\Third_Party\FreeRTOSV7.3.0\include\list.h

@@ -1,0 +1,9 @@
+.\bin\ecp_curves.o: ..\PolarSSL\polarssl-2.6.0-Apache\library\ecp_curves.c
+.\bin\ecp_curves.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/config.h
+.\bin\ecp_curves.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/check_config.h
+.\bin\ecp_curves.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\bin\ecp_curves.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/ecp.h
+.\bin\ecp_curves.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/bignum.h
+.\bin\ecp_curves.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\ecp_curves.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\ecp_curves.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

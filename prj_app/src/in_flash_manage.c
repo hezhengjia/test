@@ -1,0 +1,286 @@
+#include "in_flash_manage.h"
+#include "stmflash.h"
+#include "stm32f4xx.h"
+#include "string.h"
+#include "malloc.h"	 
+
+
+//#define NOT_USE_MALLOC 
+
+#ifdef NOT_USE_MALLOC
+uint32_t HIS_BUF[HIS_BUF_LEN];
+#endif
+
+
+void iap_start(void)
+{
+    uint8_t buf[12]= {0xaa,0xaa,0x55,0x55};
+
+    STMFLASH_Erase(BOOTLOADER_PARA_ADDR);
+    STMFLASH_Write((uint32_t )BOOTLOADER_PARA_ADDR,(uint32_t *)buf,3);
+
+    //delay_ms(100);
+
+    NVIC_SystemReset();
+}
+
+
+
+//xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+STU_HIS StuHis;
+
+
+void AnsyHis(void)
+{
+
+    uint32_t *buf;//[HIS_BUF_LEN];
+    uint8_t *pdata;
+    uint8_t *pdata_src;
+    uint16_t len_real,i,total_len;
+    uint8_t dataxor;
+    
+    
+    #ifdef NOT_USE_MALLOC 
+    buf=HIS_BUF;
+    #else
+    buf=mymalloc_mmc(HIS_BUF_LEN*4);  
+    #endif
+    pdata=(uint8_t*)buf;
+
+    pdata[0]=HIS_HEAD;
+    pdata[1]=HIS_HEAD;
+
+    len_real=sizeof(STU_HIS);
+//    dataxor_b=*((uint8_t*)(HIS_ADDR+len_real+4));
+    pdata[2]=len_real>>8;
+    pdata[3]=len_real;
+
+    pdata_src=(uint8_t*)&StuHis;
+
+    dataxor=0;
+    for(i=0; i<len_real; i++)
+    {
+        pdata[4+i]=pdata_src[i];
+        dataxor^=pdata_src[i];
+    }
+    pdata[4+len_real]=dataxor;
+
+
+    total_len=len_real+5;
+
+    //  if(dataxor_b!=dataxor)
+    {
+        STMFLASH_Erase(HIS_ADDR);
+        STMFLASH_Write((uint32_t )HIS_ADDR,(uint32_t *)buf,(total_len+3));
+    }
+    myfree_mmc(buf);
+    
+  #ifdef NOT_USE_MALLOC 
+
+    #else
+   myfree_mmc(buf);
+    #endif
+    
+}
+
+
+static uint8_t ansy_flg=0;
+
+
+#define AN_RESET  1
+#define AN_WRITE  2
+
+
+void ask_ansy(uint8_t action)
+{
+
+    ansy_flg=action;
+
+
+}
+
+
+void task_ansy_his(void)
+{
+    if(ansy_flg==0) return;
+
+    if(AN_RESET&ansy_flg)
+    {
+        ResetHis();
+
+    }
+    else if(AN_WRITE&ansy_flg)
+    {
+        AnsyHis();
+    }
+    ansy_flg=0;
+
+
+}
+void ResetHis(void)
+{
+    uint8_t *ptmp8=(uint8_t*)(0x1fff7a10);
+    uint8_t *pdes;
+    uint16_t i;
+    pdes=(uint8_t*)&StuHis;
+
+    for(i=0; i<sizeof(STU_HIS); i++)
+    {
+        pdes[i]=0;
+    }
+
+    memset(&StuHis.StuPara.remote_ip[0],0,MAX_IP_LEN);
+#if 0
+    memcpy(&StuHis.StuPara.remote_ip[0],"192.168.20.5",strlen("192.168.20.5"));
+    StuHis.StuPara.remote_port = 8087;
+#else
+    memcpy(&StuHis.StuPara.remote_ip[0],"47.104.81.55",strlen("47.104.81.55"));
+    StuHis.StuPara.remote_port = 1883;
+
+#endif
+
+
+    memset(&StuHis.StuPara.gatewayid[0],0,MAX_GATWAY_ID);
+    memcpy(&StuHis.StuPara.gatewayid[0],"001",strlen("001"));
+
+
+
+
+
+
+
+    StuHis.StuPara.dhcpstatus = true;
+
+
+    StuHis.StuPara.ip[0] = 192;
+    StuHis.StuPara.ip[1] = 168;
+    StuHis.StuPara.ip[2] = 1;
+    StuHis.StuPara.ip[3] = 250;
+
+    StuHis.StuPara.netmask[0] = 255;
+    StuHis.StuPara.netmask[1] = 255;
+    StuHis.StuPara.netmask[2] = 255;
+    StuHis.StuPara.netmask[3] = 255;
+
+
+    StuHis.StuPara.gateway[0] = 255;
+    StuHis.StuPara.gateway[1] = 255;
+    StuHis.StuPara.gateway[2] = 255;
+    StuHis.StuPara.gateway[3] = 255;
+
+    StuHis.StuPara.dns1[0] = 119;
+    StuHis.StuPara.dns1[1] = 29;
+    StuHis.StuPara.dns1[2] = 29;
+    StuHis.StuPara.dns1[3] = 29;
+
+
+    StuHis.StuPara.dns2[0] = 182;
+    StuHis.StuPara.dns2[1] = 254;
+    StuHis.StuPara.dns2[2] = 116;
+    StuHis.StuPara.dns2[3] = 116;
+
+    StuHis.StuPara.mac[0] =8;
+    StuHis.StuPara.mac[1] = 0;
+    StuHis.StuPara.mac[2] =9;
+    StuHis.StuPara.mac[3] = ptmp8[2];
+    StuHis.StuPara.mac[4] = ptmp8[1];
+    StuHis.StuPara.mac[5] = ptmp8[0];
+
+      StuHis.StuPara.heart_rate_ms=30000;
+
+    AnsyHis();
+}
+
+void InitHis(void)
+{
+
+    uint32_t *buf;//[HIS_BUF_LEN];
+    uint8_t *pdata;
+    uint8_t *pdata_s;
+    uint8_t *pdata_d;
+    uint8_t data_xor,calc_xor;
+    uint16_t len,len_real,i;
+
+    
+        #ifdef NOT_USE_MALLOC 
+    buf=HIS_BUF;
+    #else
+    buf=mymalloc_mmc(HIS_BUF_LEN*4);  
+    #endif
+    
+    
+    STMFLASH_Read(HIS_ADDR,buf,HIS_BUF_LEN);
+
+    pdata=(uint8_t*)buf;
+
+    if((pdata[0]==HIS_HEAD) &&(pdata[1]==HIS_HEAD))
+    {
+        len_real=sizeof(STU_HIS);
+
+        len=pdata[2];
+        len=(len<<8)|pdata[3];
+
+        if(len_real!=len)
+        {
+            goto HIS_END_LAB;
+        }
+
+        data_xor=*(pdata+len+4);
+        pdata_s=pdata+4;
+
+
+        calc_xor=0;
+        for(i=0; i<len; i++)
+        {
+            calc_xor^=pdata_s[i];
+        }
+
+
+        if(calc_xor!=data_xor)
+        {
+            goto HIS_END_LAB;
+        }
+
+
+        pdata_d=(uint8_t*)&StuHis;
+        for(i=0; i<len; i++)
+        {
+            pdata_d[i]=pdata_s[i];
+        }
+        
+	#ifdef NOT_USE_MALLOC 
+    buf=HIS_BUF;
+    #else
+   myfree_mmc(buf);
+    #endif
+        return ;
+    }
+
+HIS_END_LAB:
+   #ifdef NOT_USE_MALLOC 
+    #else
+   myfree_mmc(buf);
+    #endif
+    ResetHis();
+    AnsyHis();
+
+
+}
+
+void get_net_mac(uint8_t *macout)  //get MAC address form spi flash
+{
+//    uint32_t i=*(volatile uint32_t *)(0x1FFFF7E8);
+
+//    macout[0] =  'C';
+//    macout[1] =  'j';
+//    macout[2] =  'y';
+//    macout[3] =  (i>>16);
+//    macout[4] =  (i>>8);
+//    macout[5] =  (i>>0);
+
+    memcpy(macout,StuHis.StuPara.mac,6);
+
+}
+
+

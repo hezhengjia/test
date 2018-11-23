@@ -1,0 +1,22 @@
+---- send_result_to_net Matches (22 in 2 files) ----
+App.c (utilities\stm32_eval\stm324x7i_eval):void send_result_to_net(int cmd,int msg_uuid,uint8_t feed_id,int real_amount,int16_t gsensro,uint8_t code)
+App.c (utilities\stm32_eval\stm324x7i_eval):                        send_result_to_net(stu_data.cmd,stu_data.msg_uuid,stu_data.feed_id,0,0,DEVICE_NO_FOOD+Stu485rev.data[19]-2);
+App.c (utilities\stm32_eval\stm324x7i_eval):                        send_result_to_net(stu_data.cmd,stu_data.msg_uuid,stu_data.feed_id,tmp16,tmpi16,(Stu485rev.data[19]==5)?DEVICE_NO_FOOD+Stu485rev.data[19]-2:0);
+App.c (utilities\stm32_eval\stm324x7i_eval)://            send_result_to_net(stu_data.cmd,stu_data.msg_uuid,stu_data.feed_id,0,0,DEVICE_TIME_OUT);
+App.c (utilities\stm32_eval\stm324x7i_eval):        send_result_to_net(cmd,msg_uuid,feed_id,0,0,DEVICE_NOT_ONLINE);
+App.c (utilities\stm32_eval\stm324x7i_eval):                        send_result_to_net(cmd,msg_uuid,feed_id,0,0,DEVICE_MOTOR_ERR);
+App.c (utilities\stm32_eval\stm324x7i_eval):                        send_result_to_net(cmd,msg_uuid,feed_id,tmp16,tmpi16,0);
+App.c (utilities\stm32_eval\stm324x7i_eval):            send_result_to_net(cmd,msg_uuid,feed_id,0,0,DEVICE_TIME_OUT);
+Pigs.htm (mdk-arm\bin):<BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_result_to_net
+Pigs.htm (mdk-arm\bin):<BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_result_to_net
+Pigs.htm (mdk-arm\bin):<BR><BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_result_to_net
+Pigs.htm (mdk-arm\bin):<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_result_to_net
+Pigs.htm (mdk-arm\bin):<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_result_to_net
+Pigs.htm (mdk-arm\bin):<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_result_to_net
+Pigs.htm (mdk-arm\bin):<BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = process_food_in_out &rArr; send_result_to_net &rArr; queue_malloc_in &rArr; mymalloc_mmc &rArr; mymalloc &rArr; my_mem_malloc
+Pigs.htm (mdk-arm\bin):<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_result_to_net
+Pigs.htm (mdk-arm\bin):<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_result_to_net
+Pigs.htm (mdk-arm\bin):<P><STRONG><a name="[18c]"></a>send_result_to_net</STRONG> (Thumb, 142 bytes, Stack size 80 bytes, app.o(i.send_result_to_net))
+Pigs.htm (mdk-arm\bin):<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = send_result_to_net &rArr; queue_malloc_in &rArr; mymalloc_mmc &rArr; mymalloc &rArr; my_mem_malloc
+Pigs.htm (mdk-arm\bin):<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = check_wiat_list_result &rArr; send_result_to_net &rArr; queue_malloc_in &rArr; mymalloc_mmc &rArr; mymalloc &rArr; my_mem_malloc
+Pigs.htm (mdk-arm\bin):<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_result_to_net

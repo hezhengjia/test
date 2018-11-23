@@ -1,0 +1,15 @@
+.\bin\gcm.o: ..\PolarSSL\polarssl-2.6.0-Apache\library\gcm.c
+.\bin\gcm.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/config.h
+.\bin\gcm.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/check_config.h
+.\bin\gcm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\bin\gcm.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/gcm.h
+.\bin\gcm.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/cipher.h
+.\bin\gcm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\gcm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\gcm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\bin\gcm.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/aesni.h
+.\bin\gcm.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/aes.h
+.\bin\gcm.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/platform.h
+.\bin\gcm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\bin\gcm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\bin\gcm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h

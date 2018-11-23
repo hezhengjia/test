@@ -1,0 +1,17 @@
+.\bin\pem.o: ..\PolarSSL\polarssl-2.6.0-Apache\library\pem.c
+.\bin\pem.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/config.h
+.\bin\pem.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/check_config.h
+.\bin\pem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\bin\pem.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/pem.h
+.\bin\pem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\pem.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/base64.h
+.\bin\pem.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/des.h
+.\bin\pem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\pem.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/aes.h
+.\bin\pem.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/md5.h
+.\bin\pem.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/cipher.h
+.\bin\pem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\bin\pem.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/platform.h
+.\bin\pem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\bin\pem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\bin\pem.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h

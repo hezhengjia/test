@@ -1,0 +1,2 @@
+u1_gateway_firmware.boot		fixsize: 0x20000
+u1_gateway_firmware.app

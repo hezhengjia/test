@@ -1,0 +1,12 @@
+.\bin\base64.o: ..\PolarSSL\polarssl-2.6.0-Apache\library\base64.c
+.\bin\base64.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/config.h
+.\bin\base64.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/check_config.h
+.\bin\base64.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\bin\base64.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/base64.h
+.\bin\base64.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\base64.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\base64.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\bin\base64.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/platform.h
+.\bin\base64.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\bin\base64.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\bin\base64.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h

@@ -1,0 +1,14 @@
+.\bin\pkcs12.o: ..\PolarSSL\polarssl-2.6.0-Apache\library\pkcs12.c
+.\bin\pkcs12.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/config.h
+.\bin\pkcs12.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/check_config.h
+.\bin\pkcs12.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\bin\pkcs12.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/pkcs12.h
+.\bin\pkcs12.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/md.h
+.\bin\pkcs12.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\pkcs12.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/cipher.h
+.\bin\pkcs12.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/asn1.h
+.\bin\pkcs12.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/bignum.h
+.\bin\pkcs12.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\pkcs12.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\bin\pkcs12.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/arc4.h
+.\bin\pkcs12.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/des.h

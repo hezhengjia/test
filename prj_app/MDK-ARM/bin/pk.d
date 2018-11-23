@@ -1,0 +1,13 @@
+.\bin\pk.o: ..\PolarSSL\polarssl-2.6.0-Apache\library\pk.c
+.\bin\pk.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/config.h
+.\bin\pk.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/check_config.h
+.\bin\pk.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\bin\pk.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/pk.h
+.\bin\pk.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/md.h
+.\bin\pk.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\pk.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/rsa.h
+.\bin\pk.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/bignum.h
+.\bin\pk.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\pk.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/ecp.h
+.\bin\pk.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/ecdsa.h
+.\bin\pk.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/pk_internal.h

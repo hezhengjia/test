@@ -1,0 +1,9 @@
+.\bin\padlock.o: ..\PolarSSL\polarssl-2.6.0-Apache\library\padlock.c
+.\bin\padlock.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/config.h
+.\bin\padlock.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/check_config.h
+.\bin\padlock.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\bin\padlock.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/padlock.h
+.\bin\padlock.o: ..\PolarSSL\polarssl-2.6.0-Apache\include\mbedtls/aes.h
+.\bin\padlock.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\bin\padlock.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\bin\padlock.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
